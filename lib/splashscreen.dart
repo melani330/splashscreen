@@ -24,6 +24,7 @@ class _SplashScreen extends State<SplashScreen> {
 
   @override
   Widget build(BuildContext context) {
+    Size size = MediaQuery.of(context).size;
     return Scaffold(
       backgroundColor: Colors.white,
       body: Center(
@@ -31,20 +32,22 @@ class _SplashScreen extends State<SplashScreen> {
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: <Widget>[
-            Icon(
-              Icons.school,
-              size: 100.0,
-              color: Colors.white,
+            Positioned(
+              top: 0,
+              left: 0,
+              child: Image.asset(
+                "assets/images/boba.png",
+                width: size.width * 0.9,
+              ),
             ),
             SizedBox(
               height: 24.0,
             ),
             Text(
-              "SEKOLAHKU",
+              "Copyright melani, 2020",
               style: TextStyle(
-                color: Colors.white,
-                fontWeight: FontWeight.bold,
-                fontSize: 30.0,
+                color: Colors.brown,
+                fontSize: 20.0,
               ),
             ),
           ],
